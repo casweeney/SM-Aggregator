@@ -30,8 +30,8 @@
                     <ul class="navbar-nav ml-auto"><!--ml-auto pushes your nav items to the right at full width-->
                         <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="signin.php">Login</a></li>
-                        <li class="nav-item"><a style="background: #28863e; color: #fff; font-weight: bold;" class="nav-link btn btn-success" href="signup.php">Sign up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/signin">Login</a></li>
+                        <li class="nav-item"><a style="background: #28863e; color: #fff; font-weight: bold;" class="nav-link btn btn-success" href="/signup">Sign up</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                                 Easily manage all your social media and get results with<br> Aggregator.
                             </p>
                             <br>
-                            <a style="background: #28863e; padding: 12px 32px 15px 32px;" class="btn btn-success" href="signup.php">Get Started</a>
+                            <a style="background: #28863e; padding: 12px 32px 15px 32px;" class="btn btn-success" href="/signup">Get Started</a>
                         </div>
                     </div>
                     <div class="col-md-6">

@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "RouteController@index");
+Route::get('/signin', "RouteController@signin");
+Route::get('/signup', "RouteController@signup");
+Route::get('/dashboard', "RouteController@dashboard");
+Route::get('/publisher', "RouteController@publisher");
