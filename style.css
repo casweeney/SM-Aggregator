@@ -1,0 +1,216 @@
+/*Index page Styling*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+.caption {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 60px;
+    color: #184153 !important;
+}
+.caption-small {
+    font-size: 20px;
+    line-height: 30px;
+    color: #184153 !important;
+}
+
+.navbar {
+    padding: .8rem;
+}
+.navbar-nav li {
+    padding-right: 20px;
+}
+.nav-link {
+    font-size: 1.1em !important;
+}
+
+#banner {
+    background: #eee;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    overflow: hidden;
+}
+
+#banner h1, #banner h2, #banner p {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+.content {
+    padding-top: 10%;
+}
+
+#banner img {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.emp {
+    color: #fcbb47;
+    font-size: 40px;
+    font-weight: 600 !important;
+    line-height: 46px;
+    text-align: center;
+}
+
+.lead {
+    color: #fff;
+    font-weight: 400 !important;
+}
+
+.jumbotron {
+    padding: 1rem;
+    border-radius: 0;
+}
+.card {
+    border-radius: 2px;
+}
+.padding {
+    padding-bottom: 2rem;
+}
+
+#trust {
+    padding-top: 2%;
+    padding-bottom: 4%;
+
+}
+
+#trust p {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 0 24px 0;
+    line-height: 30px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#trust h2 {
+    margin-top: 20px;
+    font-size: 40px;
+    line-height: 46px;
+    margin: 10px 0 20px 0;
+    color: #000;
+    font-weight: 900;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding-top: 2rem;
+}
+footer a {
+    color: #d5d5d5;
+}
+
+/*---Media Queries---*/
+@media (max-width: 992px) {
+    .social a {
+        font-size: 4em;
+        padding: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .carousel-caption {
+        top: 45%;
+    }
+    .carousel-caption h1 {
+        font-size: 350%;
+    }
+    .carousel-caption h3 {
+        font-size: 140%;
+        font-weight: 400;
+        padding-bottom: .2rem;
+    }
+    .carousel-caption .btn {
+        font-size: 95%;
+        padding: 8px 14px;
+    }
+    .display-4 {
+        font-size: 200%;
+    }
+    .social a {
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+}
+@media (max-width: 576px) {
+    .carousel-caption {
+        top: 30%;
+    }
+    .carousel-caption h1 {
+        font-size: 200%;
+    }
+    .carousel-caption h3 {
+        font-size: 100%;
+    }
+    .carousel-caption .btn {
+        font-size: 80%;
+        padding: 4px 8px;
+    }
+    .carousel-indicators {
+        display: none;
+    }
+    .display-4 {
+        font-size: 160%;
+    }
+    .social a {
+        font-size: 2em;
+        padding: .7rem;
+    }
+
+}
+
+/*---Firefox Bug Fix---*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  backface-visibility: visible;
+}
+
+/*---Fixed Background Image---*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url(img/code.png);
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*---Bootstrap Padding Fix---*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*Sign Up page Styling*/
+#signup_card {
+    border-radius: 5px;
+}
