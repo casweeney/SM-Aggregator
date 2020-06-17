@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-black sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -108,6 +108,12 @@
         <li>
           <a href="/publisher">
             <i class="fa fa-send"></i> <span>Publisher</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/new_post">
+            <i class="fa fa-send"></i> <span>New Post</span>
           </a>
         </li>
       </ul>
