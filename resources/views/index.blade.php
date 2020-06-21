@@ -22,7 +22,7 @@
         <!--Navigation-->
         <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top" style="padding-top: 0; padding-bottom: 0;">
             <div class="container">
-                <a style="color: #184153; font-size: 24px; margin: 1% 1%;" class="navbar-brand" href="#"><b><em>A</em>ggregator</b></a>
+                <a style="color: #083e9e; font-size: 24px; margin: 1% 1%;" class="navbar-brand" href="#"><b><i class="fa fa-database"></i> <em>A</em>ggregator</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="/signin">Login</a></li>
-                        <li class="nav-item"><a style="background: #28863e; color: #fff; font-weight: bold;" class="nav-link btn btn-success" href="/signup">Sign up</a></li>
+                        <li class="nav-item"><a style="background: #30c57b; color: #fff; border-color: #30c57b;" class="nav-link btn btn-outline-success" href="/signup">Sign up</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,14 +46,15 @@
                         <div class="content">
                             <h1 class="caption">
                                 Social is<br>
-                                your superpower
+                                your superpower <br>
+                                for sales
                             </h1>
                             <br>
                             <p class="caption-small">
-                                Easily manage all your social media and get results with<br> Aggregator.
+                                Easily manage all your social media with and get results with<br> Aggregator.
                             </p>
                             <br>
-                            <a style="background: #28863e; padding: 12px 32px 15px 32px;" class="btn btn-success" href="/signup">Get Started</a>
+                            <a style="background: #30c57b; padding: 12px 32px 15px 32px; border-color: #30c57b;" class="btn btn-success" href="/signup">Get Started</a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -65,12 +66,18 @@
             <div class="lineTwo R"></div>
         </div>
         <div class="container-fluid">
-            <div class="row jumbotron" style="background: #143059">
+            <div class="row jumbotron" style="background: #f8f9fc; padding-top: 6%; padding-bottom: 5%;">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <h3 class="emp">Trusted by employees at 800+ of the Fortune 1000</h3>
-                    <p class="lead text-center">
-                        Discover what’s possible when you unite your social campaigns on one platform. Schedule and publish content to the right channels at the right time, track effectiveness in real time, and crank the volume on your top-performing content. 
-                    </p>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <p class="lead text-center">
+                                Discover what’s possible when you unite your social campaigns on one platform. Schedule and publish content to the right channels at the right time, track effectiveness in real time, and crank the volume on your top-performing content. 
+                            </p>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,7 +93,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card text-white" style="background: #143059;">
+                    <center><img class="img-fluid" src="img/svg114.svg"></center>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white" style="background: #083e9e;">
                         <div class="card-body">
                             <h4 class="card-title">Plan</h4>
                             <p class="card-text">View and manage all your social content in a single collaborative calendar</p>
@@ -102,14 +112,11 @@
 
 
                     <div class="card">
-                        <div class="card-body text-white" style="background: #143059;">
+                        <div class="card-body text-white" style="background: #083e9e;">
                             <h4 class="card-title">Schedule</h4>
                             <p class="card-text">Keep your social presence active 24/7 by automatically scheduling posts to fill the gaps in your calendar</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <center><img class="img-fluid" src="img/svg114.svg"></center>
                 </div>
             </div>
             <br>

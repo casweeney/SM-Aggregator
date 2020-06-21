@@ -37,8 +37,8 @@
 
   <header class="main-header">
     <a href="index2.html" class="logo">
-      <span class="logo-mini"><b><em>A</em>G</b></span>
-      <span class="logo-lg"><b><em>A</em>ggregator</b></span>
+      <span class="logo-mini"><b><i class="fa fa-database"></i> <em>A</em>G</b></span>
+      <span class="logo-lg"><b><i class="fa fa-database"></i> <em>A</em>ggregator</b></span>
     </a>
     
     <nav class="navbar navbar-static-top">

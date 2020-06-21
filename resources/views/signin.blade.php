@@ -25,7 +25,7 @@
                         
                     </div>
                     <div class="col-md-4">
-                        <a class="navbar-brand" style="color: #184153; font-size: 24px; margin: 1% 1%;" href="/"><b><em>A</em>ggregator</b></a>
+                        <a class="navbar-brand" style="color: #083e9e; font-size: 24px; margin: 1% 1%;" href="/"><b><i class="fa fa-database"></i> <em>A</em>ggregator</b></a>
 
                         <div class="card" id="signup_card" style="padding-top: 6%;">
                             <img src="img/email.svg">
@@ -37,10 +37,10 @@
                                   <div class="form-group">
                                     <input type="password" placeholder="Choose password" class="form-control" id="pwd">
                                   </div>
-                                  <center><button type="submit" name="signin_btn" class="btn btn-success" style="background: #28863e; padding-right: 20%; padding-left: 20%; border-radius: 2px;">Sign in</button></center>
+                                  <center><button type="submit" name="signin_btn" class="btn btn-success" style="background: #30c57b; border-color: #30c57b; padding-right: 20%; padding-left: 20%; border-radius: 2px;">Sign in</button></center>
                                 </form>
                                 <br>
-                                <center><a href="/signup" class="btn btn-default text-success" style="color: #28863e; padding-right: 20%; padding-left: 20%; border-radius: 2px;">Sign up</a></center>
+                                <center><a href="/signup" class="btn btn-default text-success" style="color: #30c57b; padding-right: 20%; padding-left: 20%; border-radius: 2px;">Sign up</a></center>
                             </div>
                             <div class="card-footer">
                                 <p class="text-dark text-center" style="font-size: 12px;">or sign in with</p>

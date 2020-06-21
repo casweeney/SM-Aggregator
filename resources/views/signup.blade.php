@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-md-4">
 
-                      <a class="navbar-brand" style="color: #184153; font-size: 24px; margin: 1% 1%;" href="/"><b><em>A</em>ggregator</b></a>
+                      <a class="navbar-brand" style="color: #083e9e; font-size: 24px; margin: 1% 1%;" href="/"><b><i class="fa fa-database"></i> <em>A</em>ggregator</b></a>
 
                         <div class="card" id="signup_card" style="padding-top: 6%;">
                             <div class="card-body">
@@ -41,10 +41,10 @@
                                       <input class="form-check-input" type="checkbox"> <span style="font-size: 12px;">By click this, I agree to the <a href="#">Terms and Conditions</a></span>
                                     </label>
                                   </div>
-                                  <center><button type="submit" class="btn btn-info" style="background: #28863e; padding-right: 20%; padding-left: 20%; border-radius: 2px;">Sign up</button></center>
+                                  <center><button type="submit" class="btn btn-info" style="background: #30c57b; border-color: #30c57b; padding-right: 20%; padding-left: 20%; border-radius: 2px;">Sign up</button></center>
                                 </form>
                                 <br>
-                                <center><a href="/signin" class="btn btn-default text-success" style="color: #28863e; padding-right: 20%; padding-left: 20%; border-radius: 2px;">Sign in</a></center>
+                                <center><a href="/signin" class="btn btn-default text-success" style="color: #30c57b; padding-right: 20%; padding-left: 20%; border-radius: 2px;">Sign in</a></center>
                             </div>
                             <div class="card-footer">
                                 <p class="text-dark text-center" style="font-size: 12px;">or sign up with</p>

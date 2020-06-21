@@ -11,7 +11,7 @@ html, body {
     font-size: 54px;
     font-weight: 900;
     line-height: 60px;
-    color: #184153 !important;
+    color: #083e9e !important;
 }
 .caption-small {
     font-size: 20px;
@@ -30,7 +30,7 @@ html, body {
 }
 
 #banner {
-    background: #eee;
+    background: #fff;
     padding-top: 1%;
     padding-bottom: 1%;
     overflow: hidden;
@@ -51,7 +51,7 @@ html, body {
 }
 
 .emp {
-    color: #fcbb47;
+    color: #083e9e;
     font-size: 40px;
     font-weight: 600 !important;
     line-height: 46px;
@@ -59,7 +59,7 @@ html, body {
 }
 
 .lead {
-    color: #fff;
+    color: #667081;
     font-weight: 400 !important;
 }
 
