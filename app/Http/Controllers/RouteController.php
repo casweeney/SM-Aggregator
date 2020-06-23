@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Twitter;
 
 class RouteController extends Controller
 {
@@ -16,9 +17,10 @@ class RouteController extends Controller
         return view('signup');
     }
     public function dashboard(){
-        return view('client.index');
+        // dd(session()->all());
+        return view('user.index');
     }
     public function publisher(){
-        return view('client.pages.calendar');
+        return view('user.pages.calendar');
     }
 }

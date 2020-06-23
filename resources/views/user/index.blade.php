@@ -54,24 +54,59 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
+
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-plus"></i> Add Media Account <i class="fa fa-database"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <h4 style="margin-bottom: -3% !important;">
+                        <center><a href="{{url('twitter_login')}}" class="btn btn-info"><i class="fa fa-twitter"></i> Add Twitter</a></center>
+                      </h4>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li><!-- start message -->
+                    <a href="#">
+                      <h4 style="margin-bottom: -3% !important;">
+                        <center><a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i> Add Facebook</a></center>
+                      </h4>
+                    </a>
+                  </li>
+                  <li><!-- start message -->
+                    <a href="#">
+                      <h4 style="margin-bottom: -3% !important;">
+                        <center><a href="#" class="btn btn-primary"><i class="fa fa-linkedin"></i> Add Linkedin</a></center>
+                      </h4>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              {{-- <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"> --}}
+              <span class="hidden-xs">{{auth()->user()->fullname}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                {{-- <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"> --}}
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  {{auth()->user()->fullname}}
+                  <small>Member since {{auth()->user()->created_at}}</small>
                 </p>
               </li>
               <!-- Menu Body -->
-              <li class="user-body">
+              {{-- <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
                     <a href="#">Followers</a>
@@ -84,14 +119,14 @@
                   </div>
                 </div>
                 <!-- /.row -->
-              </li>
+              </li> --}}
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
+                {{-- <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
+                </div> --}}
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -131,6 +166,9 @@
   <div class="content-wrapper">
     <!-- Main content -->
     <section class="content">
+      <center>
+        @include('include.messages')
+      </center>
       <!-- Small boxes (Stat box) -->
       <div class="row">
         {{-- Twitter Tweets --}}
