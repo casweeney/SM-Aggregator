@@ -16,8 +16,10 @@ class CreateTwitterRecordsTable extends Migration
         Schema::create('twitter_records', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->integer('t_user_id');
+            $table->bigInteger('t_user_id');
+            $table->string('name');
             $table->string('screen_name');
+            $table->string('profile_image_url');
             $table->string('oauth_token');
             $table->string('oauth_token_secret');
             $table->timestamps();

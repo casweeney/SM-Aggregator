@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\TokenFetcherService;
 use Illuminate\Http\Request;
 use Twitter;
+use App\TwitterRecord;
 
 class RouteController extends Controller
 {
@@ -17,8 +19,18 @@ class RouteController extends Controller
         return view('signup');
     }
     public function dashboard(){
-        // dd(session()->all());
-        return view('user.index');
+        $user = auth()->user();
+
+        $twitter_details = TwitterRecord::where(['user_id'=>$user->id])->first();
+
+        if($twitter_details){
+            Twitter::reconfig((new TokenFetcherService())->getTwitterToken());
+            $data = Twitter::getUserTimeline(['screen_name' => $twitter_details['screen_name'], 'count' => 5, 'format' => 'array']);
+            $mentions = Twitter::getMentionsTimeline(['count' => 5, 'format' => 'array']);
+            return view('user.index', ['data'=>$data, 'twitter_details'=>$twitter_details, 'mentions'=>$mentions]);
+        }else{
+            return view('user.index');
+        }
     }
     public function publisher(){
         return view('user.pages.calendar');

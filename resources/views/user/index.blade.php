@@ -172,116 +172,96 @@
       <!-- Small boxes (Stat box) -->
       <div class="row">
         {{-- Twitter Tweets --}}
-        <div class="col-lg-3 col-xs-6">
-          <div class="small-box" style="background: #fff;">
-            <div class="inner" style="padding-left: 0;">
-              <div class="row">
-                <div class="col-md-12">
-                  <h4 class="text-center"><img src="/img/twitter.png" width="25" alt=""> <b>Tweets</b> <span style="font-size: 12px; color: #aaa;">thecodingcas</span></h4>
+        @if(!empty($twitter_details))
+          <div class="col-lg-3 col-xs-6">
+            <div class="small-box" style="background: #fff;">
+              <div class="inner" style="padding-left: 0;">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h4 class="text-center"><img src="/img/twitter.png" width="25" alt=""> <b>Tweets</b> <span style="font-size: 12px; color: #aaa;">{{$twitter_details['screen_name']}}</span></h4>
+                  </div>
                 </div>
+                <hr>
+                
+                @if(!empty($data))
+                    @foreach($data as $key => $value)
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2 col-xs-2" style="padding-left: 27px;">
+                          <img src="{{$twitter_details['profile_image_url']}}" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-9" style="margin-left: 18px;">
+                          <p><a href="https://twitter.com{{$twitter_details['screen_name']}}">{{$twitter_details['name']}} <br>@ {{$twitter_details['screen_name']}}</a></p>
+                        </div>
+                        <div class="col-md-12" style="padding: 2px 30px 2px 30px;">
+                          <p>
+                            {{ $value['text'] }}
+                            <br>
+                            @if(!empty($value['extended_entities']['media']))
+                                @foreach($value['extended_entities']['media'] as $v)
+                                    <img src="{{ $v['media_url_https'] }}" class="img-responsive img-thumbnail">
+                                @endforeach
+                            @endif
+                          </p>
+                          <code>{{ $value['created_at'] }}</code>
+                        </div>
+                      </div>
+                      <hr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="6">There are no data.</td>
+                    </tr>
+                @endif
               </div>
-              <hr>
-
-              <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                  <img src="/img/6.png" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <p><a href="#">Casweeney Ojukwu @thecodingcas</a></p>
-                  <p>
-                    I am currently showing @iMAG_Official how the twitter API works
-                  </p>
-                  <code>11 hours ago</code>
-                </div>
-              </div>
-              <hr>
-
-              <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                  <img src="/img/6.png" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <p><a href="#">Casweeney Ojukwu @thecodingcas</a></p>
-                  <p>
-                    My account has been verified. Thanks
-                  </p>
-                  <code>1 day ago</code>
-                </div>
-              </div>
-              <hr>
-
-              <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                  <img src="/img/6.png" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <p><a href="#">Casweeney Ojukwu @thecodingcas</a></p>
-                  <p>
-                    This tweet is coming from an awesome script using PHP and Twitter API developed by @thecodingcas
-                  </p>
-                  <code>2 days ago</code>
-                </div>
-              </div>
-              <hr>
             </div>
           </div>
-        </div>
+        
 
-        {{-- Twitter Mentions --}}
-        <div class="col-lg-3 col-xs-6">
-          <div class="small-box" style="background: #fff;">
-            <div class="inner" style="padding-left: 0;">
-              <div class="row">
-                <div class="col-md-12">
-                  <h4 class="text-center"><img src="/img/twitter.png" width="25" alt=""> <b>Mentions</b> <span style="font-size: 12px; color: #aaa;">thecodingcas</span></h4>
-                </div>
-              </div>
-              <hr>
 
-              <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                  <img src="/img/6.png" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
+          {{-- Twitter Mentions --}}
+          <div class="col-lg-3 col-xs-6">
+            <div class="small-box" style="background: #fff;">
+              <div class="inner" style="padding-left: 0;">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h4 class="text-center"><img src="/img/twitter.png" width="25" alt=""> <b>Mentions</b> <span style="font-size: 12px; color: #aaa;">{{$twitter_details['screen_name']}}</span></h4>
+                  </div>
                 </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <p><a href="#">Casweeney Ojukwu @thecodingcas</a></p>
-                  <p>
-                    I am currently showing @iMAG_Official how the twitter API works
-                  </p>
-                  <code>11 hours ago</code>
-                </div>
-              </div>
-              <hr>
+                <hr>
 
-              <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                  <img src="/img/6.png" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <p><a href="#">Casweeney Ojukwu @thecodingcas</a></p>
-                  <p>
-                    I am currently showing @iMAG_Official how the twitter API works
-                  </p>
-                  <code>11 hours ago</code>
-                </div>
+                @if(!empty($mentions))
+                    @foreach($mentions as $key => $mention)
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2 col-xs-2" style="padding-left: 27px;">
+                          <img src="{{$twitter_details['profile_image_url']}}" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-9" style="margin-left: 18px;">
+                          <p><a href="https://twitter.com{{$twitter_details['screen_name']}}">{{$twitter_details['name']}} <br>@ {{$twitter_details['screen_name']}}</a></p>
+                        </div>
+                        <div class="col-md-12" style="padding: 2px 30px 2px 30px;">
+                          <p>
+                            {{ $mention['text'] }}
+                            <br>
+                            @if(!empty($mention['extended_entities']['media']))
+                                @foreach($mention['extended_entities']['media'] as $v)
+                                    <img src="{{ $v['media_url_https'] }}" class="img-responsive img-thumbnail">
+                                @endforeach
+                            @endif
+                          </p>
+                          <code>{{ $value['created_at'] }}</code>
+                        </div>
+                      </div>
+                      <hr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="6">There are no data.</td>
+                    </tr>
+                @endif
               </div>
-              <hr>
-
-              <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                  <img src="/img/6.png" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <p><a href="#">Casweeney Ojukwu @thecodingcas</a></p>
-                  <p>
-                    I am currently showing @iMAG_Official how the twitter API works
-                  </p>
-                  <code>11 hours ago</code>
-                </div>
-              </div>
-              <hr>
             </div>
           </div>
-        </div>
+        @endif
         
 
         {{-- Facebook Page Posts --}}

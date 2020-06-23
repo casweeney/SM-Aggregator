@@ -68,24 +68,26 @@ class TwitterController extends Controller
 
             if (is_object($credentials) && !isset($credentials->error))
             {
-                // dd($credentials,$token);
+                //dd($credentials,$token);
 
                 $user = Auth::user();
 
-                $usercheck = TwitterRecord::where(['user_id'=>$user->id, 't_user_id'=>$token['user_id']]);
+                $usercheck = TwitterRecord::where(['user_id'=>$user->id]);
                 $check = $usercheck->count();
                 if($check > 0){
-                    return Redirect::to('/dashboard')->with('error', 'Your twitter account already exist');
+                    return Redirect::to('/dashboard')->with('error', 'Your already have an existing twitter account');
                 }else{
                     $twitter = new TwitterRecord;
                     $twitter->user_id = $user->id;
                     $twitter->t_user_id = $token['user_id'];
+                    $twitter->name = $credentials->name;
                     $twitter->screen_name = $token['screen_name'];
+                    $twitter->profile_image_url = $credentials->profile_image_url_https;
                     $twitter->oauth_token = $token['oauth_token'];
                     $twitter->oauth_token_secret = $token['oauth_token_secret'];
 
                     if($twitter->save()){
-                        dd($credentials,$token);
+                        return Redirect::to('/dashboard')->with('success', 'Twitter Account Added');
                     }
                     // $credentials contains the Twitter user object with all the info about the user.
                     // Add here your own user logic, store profiles, create new users on your tables...you name it!
