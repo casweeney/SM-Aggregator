@@ -173,7 +173,7 @@
       <div class="row">
         {{-- Twitter Tweets --}}
         @if(!empty($twitter_details))
-          <div class="col-lg-3 col-xs-6">
+          <div class="col-lg-3 col-xs-12">
             <div class="small-box" style="background: #fff;">
               <div class="inner" style="padding-left: 0;">
                 <div class="row">
@@ -187,10 +187,10 @@
                     @foreach($data as $key => $value)
                       <div class="row">
                         <div class="col-md-2 col-sm-2 col-xs-2" style="padding-left: 27px;">
-                          <img src="{{$twitter_details['profile_image_url']}}" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
+                          <img src="{{$credentials->profile_image_url_https}}" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
                         </div>
                         <div class="col-md-9 col-sm-9 col-xs-9" style="margin-left: 18px;">
-                          <p><a href="https://twitter.com{{$twitter_details['screen_name']}}">{{$twitter_details['name']}} <br>@ {{$twitter_details['screen_name']}}</a></p>
+                          <p><a href="https://twitter.com/{{$twitter_details['screen_name']}}">{{$twitter_details['name']}} <br>@ {{$twitter_details['screen_name']}}</a></p>
                         </div>
                         <div class="col-md-12" style="padding: 2px 30px 2px 30px;">
                           <p>
@@ -219,7 +219,7 @@
 
 
           {{-- Twitter Mentions --}}
-          <div class="col-lg-3 col-xs-6">
+          <div class="col-lg-3 col-xs-12">
             <div class="small-box" style="background: #fff;">
               <div class="inner" style="padding-left: 0;">
                 <div class="row">
@@ -233,10 +233,10 @@
                     @foreach($mentions as $key => $mention)
                       <div class="row">
                         <div class="col-md-2 col-sm-2 col-xs-2" style="padding-left: 27px;">
-                          <img src="{{$twitter_details['profile_image_url']}}" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
+                          <img src="{{$credentials->profile_image_url_https}}" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
                         </div>
                         <div class="col-md-9 col-sm-9 col-xs-9" style="margin-left: 18px;">
-                          <p><a href="https://twitter.com{{$twitter_details['screen_name']}}">{{$twitter_details['name']}} <br>@ {{$twitter_details['screen_name']}}</a></p>
+                          <p><a href="https://twitter.com/{{$twitter_details['screen_name']}}">{{$twitter_details['name']}} <br>@ {{$twitter_details['screen_name']}}</a></p>
                         </div>
                         <div class="col-md-12" style="padding: 2px 30px 2px 30px;">
                           <p>

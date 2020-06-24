@@ -82,7 +82,6 @@ class TwitterController extends Controller
                     $twitter->t_user_id = $token['user_id'];
                     $twitter->name = $credentials->name;
                     $twitter->screen_name = $token['screen_name'];
-                    $twitter->profile_image_url = $credentials->profile_image_url_https;
                     $twitter->oauth_token = $token['oauth_token'];
                     $twitter->oauth_token_secret = $token['oauth_token_secret'];
 

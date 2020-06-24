@@ -12,14 +12,17 @@
 */
 
 Route::get('/', "RouteController@index");
-Route::get('/signin', "RouteController@signin");
-Route::get('/signup', "RouteController@signup");
-Route::get('/dashboard', "RouteController@dashboard");
+Route::get('/signin', "RouteController@signin")->name('signin');
+Route::get('/signup', "RouteController@signup")->name('signup');
+Route::get('/dashboard', "RouteController@dashboard")->middleware('auth');
 Route::get('/publisher', "RouteController@publisher");
+Route::get('/new_post', "RouteController@new_post")->middleware('auth');
+
+Route::post('/new_post', ['as'=>'post.tweet','uses'=>'RouteController@tweet'])->middleware('auth');
 
 // Signin with Twitter Routes
-Route::get('twitter_login', "TwitterController@login");
-Route::get('callback', "TwitterController@callback")->name('twitter.callback');
+Route::get('twitter_login', "TwitterController@login")->middleware('auth');
+Route::get('callback', "TwitterController@callback")->name('twitter.callback')->middleware('auth');
 // End Signin with Twitter Routes
 
 Route::post('/signup', "UserController@signup")->name('signup');
