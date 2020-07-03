@@ -29,6 +29,28 @@ Route::post('/signup', "UserController@signup")->name('signup');
 Route::post('/signin', "UserController@signin")->name('signin');
 Route::get('/logout', 'UserController@logout')->middleware('auth');
 
+//Artisan Command Routes
+Route::get('/config-clear', function() {
+	$status = Artisan::call('config:clear');
+	return '<h1>Configurations cleared</h1>';
+});
+Route::get('/cache-clear', function() {
+	$status = Artisan::call('cache:clear');
+	return '<h1>Cache cleared</h1>';
+});
+Route::get('/config-cache', function() {
+	$status = Artisan::call('config:cache');
+	return '<h1>Configurations cache cleared</h1>';
+});
+Route::get('/route-clear', function() {
+	$status = Artisan::call('route:clear');
+	return '<h1>Routes cache cleared</h1>';
+});
+Route::get('/view-clear', function() {
+	$status = Artisan::call('view:clear');
+	return '<h1>Compiled views cleared</h1>';
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
